@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+
+class Shape
+{
+    public:
+        void draw() {
+            cout << "Drawing...";
+        }
+};
+//inherit from Shape
+class Rectangle : Shape
+{
+    private:
+        int width;
+        int height;
+    public:
+        Rectangle(int w, int h): width(w), height(h) {
+            cout <<w<<"x"<<h<<endl;
+        };
+};
+
+int main() {
+    int x, y;
+    cin>>x>>y;
+    Rectangle d(x, y);
+    Shape sh;
+    sh.draw();
+    //call the draw() method
+    
+}
